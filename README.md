@@ -91,51 +91,22 @@ https://chat.googleapis.com/v1/spaces/ABC123/messages?key=xyz&token=abc
 
 ---
 
-## שלב 3: העלאת הקוד ל-GitHub
+## שלב 3: הגדרת Render (דיפלוי)
 
-### 3.1 יצירת Repository
-
-1. היכנסו ל-GitHub: https://github.com
-2. לחצו **+** (למעלה מימין) ואז **New repository**
-3. תנו שם (לדוגמה: `telegram-to-google-bot`)
-4. בחרו **Private**
-5. לחצו **Create repository**
-
-### 3.2 העלאת הקוד
-
-אם עדיין לא עשיתם clone:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/telegram-to-google-bot.git
-cd telegram-to-google-bot
-```
-
-העתיקו את כל קבצי הפרויקט לתיקייה ועשו push:
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
----
-
-## שלב 4: הגדרת Render (דיפלוי)
-
-### 4.1 יצירת חשבון
+### 3.1 יצירת חשבון
 
 1. היכנסו ל: https://render.com
 2. לחצו **Get Started for Free**
 3. הירשמו עם חשבון GitHub (הכי קל)
 
-### 4.2 יצירת שירות חדש
+### 3.2 יצירת שירות חדש
 
 1. בדשבורד של Render, לחצו **New +**
 2. בחרו **Web Service**
 3. חברו את חשבון ה-GitHub שלכם (אם עדיין לא מחובר)
 4. מצאו את ה-repository ולחצו **Connect**
 
-### 4.3 הגדרות השירות
+### 3.3 הגדרות השירות
 
 מלאו את הפרטים הבאים:
 
@@ -148,7 +119,7 @@ git push origin main
 | **Start Command** | `python -m src.main` |
 | **Instance Type** | Free |
 
-### 4.4 הגדרת משתני סביבה (Environment Variables)
+### 3.4 הגדרת משתני סביבה (Environment Variables)
 
 זה החלק הכי חשוב! גללו למטה לאזור **Environment Variables** ולחצו **Add Environment Variable** עבור כל אחד:
 
@@ -159,7 +130,7 @@ git push origin main
 | `LOG_LEVEL` | `INFO` |
 | `PYTHON_VERSION` | `3.14.0` |
 
-### 4.5 יצירה והפעלה
+### 3.5 יצירה והפעלה
 
 1. לחצו **Create Web Service**
 2. Render יתחיל לבנות ולהפעיל את הבוט
@@ -167,7 +138,7 @@ git push origin main
 
 ---
 
-## שלב 5: בדיקה
+## שלב 4: בדיקה
 
 1. פתחו את הבוט בטלגרם (חפשו את ה-username שנתתם)
 2. שלחו לו הודעת טקסט
